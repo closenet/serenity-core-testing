@@ -1,6 +1,7 @@
 package serenity.test.suite.steps.ui;
 
 import cucumber.api.java.en.And;
+
 import cucumber.api.java.en.Given;
 import serenity.test.suite.pages.SkySignUpPage;
 

@@ -1,4 +1,5 @@
 Feature: Client should get the portfolio of the sky customer returned
+
   In order to see the customer portfolio
   As a client
   I want to get the customer portfolio

@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>1.1.38</serenity.version>
         <serenity.cucumber.version>1.1.9</serenity.cucumber.version>
-        <webdriver.driver>chrome</webdriver.driver>
+        <!--<webdriver.driver>chrome</webdriver.driver>-->
     </properties>
     <repositories>
       <repository>
@@ -49,9 +49,20 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-junit</artifactId>
+            <version>1.1.42</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-simple</artifactId>-->
+            <!--<version>1.7.7</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-nop -->
+        <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.7</version>
+            <artifactId>slf4j-nop</artifactId>
+            <version>1.7.21</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -79,6 +90,23 @@
             <artifactId>rest-assured</artifactId>
             <version>3.0.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-report-resources -->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-report-resources</artifactId>
+            <version>1.1.41</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-project-info-reports-plugin -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-project-info-reports-plugin</artifactId>-->
+            <!--<version>2.9</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.5.1</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -99,7 +127,7 @@
                     </includes>
                     <argLine>-Xmx512m</argLine>
                     <systemPropertyVariables>
-                        <webdriver.driver>${webdriver.driver}</webdriver.driver>
+                        <!--<webdriver.driver>${webdriver.driver}</webdriver.driver>-->
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
@@ -134,6 +162,25 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
+            </plugin>
         </plugins>
     </build>
+    <!--<distributionManagement>-->
+        <!--&lt;!&ndash; use the following if you're not using a snapshot version. &ndash;&gt;-->
+        <!--<repository>-->
+            <!--<id>localSnap</id>-->
+            <!--<name>RepositoryProxyRel</name>-->
+            <!--&lt;!&ndash;<url>http://127.0.0.1:8080/nexus/content/repositories/releases/</url>&ndash;&gt;-->
+        <!--</repository>-->
+        <!--&lt;!&ndash; use the following if you ARE using a snapshot version. &ndash;&gt;-->
+        <!--<snapshotRepository>-->
+            <!--<id>MylocalSnap</id>-->
+            <!--<name>RepositoryProxySnap</name>-->
+            <!--&lt;!&ndash;<url>http://127.0.0.1:8080/nexus/content/repositories/snapshots/</url>&ndash;&gt;-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 </project>

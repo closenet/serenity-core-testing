@@ -7,8 +7,7 @@ import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Title;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import phoenix.test.suite.steps.services.appointmentsSteps;
-
+import phoenix.test.suite.utilities.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -17,7 +16,7 @@ import static org.hamcrest.Matchers.*;
 public class appointments_post {
 
     @Steps
-    appointmentsSteps appointmentClass;
+    appointmentsUtils appointmentClass;
 
     String partyId = "13824472694041890451075";
     String intentionCode = "STB_GATEWAY_1";

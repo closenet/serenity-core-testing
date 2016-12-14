@@ -1,4 +1,4 @@
-package phoenix.test.suite.steps.services;
+package phoenix.test.suite.utilities;
 
 import io.restassured.response.Response;
 import net.thucydides.core.annotations.Step;
@@ -10,7 +10,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.*;
 
 
-public class appointmentsSteps {
+public class appointmentsUtils {
 
     private Response response;
 
